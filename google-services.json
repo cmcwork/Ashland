@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "326120545493",
+    "firebase_url": "https://washland-test.firebaseio.com",
+    "project_id": "washland-test",
+    "storage_bucket": "washland-test.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:326120545493:android:88c7077b0ce450fb",
+        "android_client_info": {
+          "package_name": "com.test.WAshland1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "326120545493-tct0lisddgk2p007jnufq0js68srko3e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARXIOiQpiVcdrOcoCce4CuFWDtpydoFwU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

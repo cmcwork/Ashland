@@ -1,0 +1,52 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.test.WAshland1"
+    },
+    "cordova-plugin-email": {
+      "PACKAGE_NAME": "com.test.WAshland1"
+    },
+    "cordova-plugin-geolocation": {
+      "PACKAGE_NAME": "com.test.WAshland1"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "com.test.WAshland1"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "com.test.WAshland1"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.test.WAshland1"
+    },
+    "deviceutility": {
+      "PACKAGE_NAME": "com.test.WAshland1"
+    },
+    "ionic-plugin-keyboard": {
+      "PACKAGE_NAME": "com.test.WAshland1"
+    },
+    "phonegap-plugin-barcodescanner": {
+      "PACKAGE_NAME": "com.test.WAshland1"
+    },
+    "phonegap-plugin-push": {
+      "FCM_VERSION": "11.6.2",
+      "PACKAGE_NAME": "com.test.WAshland1"
+    },
+    "cordova-plugin-ip-mac-address": {
+      "PACKAGE_NAME": "com.test.WAshland1"
+    },
+    "cz.blocshop.socketsforcordova": {
+      "PACKAGE_NAME": "com.test.WAshland1"
+    },
+    "cordova-plugin-opensettings": {
+      "PACKAGE_NAME": "com.test.WAshland1"
+    }
+  },
+  "dependent_plugins": {}
+}

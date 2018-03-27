@@ -1,0 +1,16 @@
+{
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "deviceutility",
+    "platforms": [
+      "android"
+    ]
+  },
+  "deprecated": false,
+  "description": "This plugin allows application to grant permission.",
+
+  "name": "deviceutility",
+
+  "version": "1.0.0"
+}
+

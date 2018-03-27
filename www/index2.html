@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' http://207.135.172.62:8090 data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+		
+    <script src="js/libs/vendor-c012a11dec.js"></script>
+
+		<script type="text/javascript" src="js/libs/moment-with-locales.js"></script>
+		<script type="text/javascript" src="js/libs/localforage.js"></script>
+		<script type="text/javascript" src="js/libs/jquery-3.3.1.min.js"></script>
+		
+        <script type="text/javascript" src="js/libs/angular-1.6.7/angular.min.js"></script>
+        <script type="text/javascript" src="js/libs/angular-1.6.7/angular-animate.min.js"></script>
+        <script type="text/javascript" src="js/libs/angular-1.6.7/angular-touch.min.js"></script>
+        <script type="text/javascript" src="js/libs/angular-1.6.7/angular-ui-router.js"></script>
+		
+		<script type="text/javascript" src="js/libs/ui-bootstrap-tpls-2.5.0.min.js"></script>
+		<script type="text/javascript" src="js/libs/angular-localForage.js"></script>
+		
+        <script src="libs/fontawesome-free-5.0.6/svg-with-js/js/fontawesome-all.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+		<link rel="stylesheet" type="text/css" href="css/pages/messages.css">
+		<link rel="stylesheet" type="text/css" href="css/pages/pumpdetails.css">
+		<link rel="stylesheet" type="text/css" href="css/pages/pumps.css">
+		<link rel="stylesheet" type="text/css" href="css/pages/setup.css">
+		<link rel="stylesheet" type="text/css" href="css/pages/me.css">
+        <link rel="stylesheet" type="text/css" href="css/platformfixes.css">
+        <title>WAshland2</title>
+    </head>
+    <body ng-cloak ng-controller="indexController">
+		<div class="splash" ng-show="!hasInitialized">
+		</div>
+        <div class="app" ng-show="hasInitialized">
+			<div class="header">
+				<div class="headerLeft textCenter" ng-click="rootBackFuncWarpper()">
+					<!--<div class="largeIcon verticalCenter" ng-show="isRootBack">
+						<i class="fas fa-sign-out-alt"></i>
+					</div>-->
+					<div class="largeIcon verticalCenter" ng-show="!isRootBack">
+						<i class="fas fa-arrow-right"></i>
+					</div>
+				</div>
+				<div class="headerMiddle textCenter">
+					<div class="largeIcon verticalCenter">
+						{{pageNames[page]}}
+					</div>
+				</div>
+				<div class="headerRight textCenter" ng-show="menuOptions.length > 0" ng-click="toggleMenu()">
+					<div class="largeIcon verticalCenter">
+						<i class="fas fa-bars"></i>
+					</div>
+				</div>
+			</div>
+			<div class="view" ng-show="!showScanning" ng-class="{'viewNoFooter':!footerVisible}">
+				<ui-view></ui-view>
+			</div>
+			<div class="view rootScanning" ng-show="showScanning" ng-class="{'viewNoFooter':!footerVisible}">
+				<div class="rootScanningInner">
+				</div>
+			</div>
+			<div class="footer" ng-show="footerVisible">
+				<div class="footerLeft textCenter" ng-click="selectFooter('pumps')" ng-class="{'footerSelected':page.startsWith('pump'), 'footerDisabled':!isMeComplete()}">
+					<div class="verticalCenter footerInner">
+						<div class="footerIcon">
+							<i class="fas fa-tint"></i>
+						</div>
+						<div class="footerText">
+							Pumps
+						</div>
+					</div>
+				</div>
+				<div class="footerMiddle textCenter" ng-click="selectFooter('setup')" ng-class="{'footerSelected':page=='setup', 'footerDisabled':!isMeComplete()}">
+					<div class="verticalCenter footerInner">
+						<div class="footerIcon">
+							<i class="fas fa-cog"></i>
+						</div>
+						<div class="footerText">
+							Setup
+						</div>
+					</div>
+				</div>
+				<div class="footerRight textCenter" ng-click="selectFooter('me')" ng-class="{'footerSelected':page=='me'}">
+					<div class="verticalCenter footerInner">
+						<div class="footerIcon">
+							<i class="fas fa-user"></i>
+						</div>
+						<div class="footerText">
+							Me
+						</div>
+					</div>
+				</div>
+			</div>
+        </div>
+		<div class="menu">
+			<div class="menuItem" ng-repeat="item in menuOptions" menu-Repeat-Directive ng-click="item.callback(item.args)">
+				<div class="menuItemLeft">
+					<div class="verticalCenter menuItemInner">
+						<i class="{{item.icon}}"></i>
+					</div>
+				</div>
+				<div class="menuItemRight">
+					<div class="verticalCenter menuItemInner">
+						{{item.title}}
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="popupBk allClicks" ng-show="popupShowing"></div>
+		<div class="popup" ng-show="popupShowing">
+			<div class="popupInner">
+				<div class="popupTop">
+					<div class="popupTextContainer" ng-show="currentPopup==='popupMeIncomplete'">
+						You must fill out your Me information before you can Setup your pump or view your Pump List.
+					</div>
+					<div class="popupTextContainer" ng-show="currentPopup==='popupVerifyWifiFail'">
+						<div>
+							You are not connected to WiFi.
+						</div>
+						<div class="popupVerifyWifiBottom">
+							Please go to your phone's settings and connect to your home WiFi. Press phone back button to exit the app. 
+						</div>
+					</div>
+					<div class="popupTextContainer" ng-show="currentPopup==='popupVerifyWifiNo'">
+						Please go to your phone's settings and connect to your home WiFi. Press phone back button to exit the app.
+					</div>
+					<div class="popupTextContainer" ng-show="currentPopup==='popupConfirmExit'">
+						Are you sure you want to exit from the app?
+					</div>
+					<div class="popupTextContainer" ng-show="currentPopup==='popupVerifyWifi'">
+						<div class="popupVerifyWifiTop">
+							You are connected to:
+						</div>
+						<div class="popupVerifyWifiMiddle">
+							{{unverifiedSSID}}
+						</div>
+						<div class="popupVerifyWifiBottom">
+							Is this your home WiFi?
+						</div>
+					</div>
+				</div>
+				<div class="popupBottom">
+					<div ng-repeat="item in popupStates[currentPopup].buttons">
+						<button class="{{item.styleClass}}" ng-click="item.callback()">{{item.title}}</button>
+					</div>
+				</div>
+			</div>
+		</div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/utilities.js"></script>
+        <script type="text/javascript" src="js/models.js"></script>
+        <script type="text/javascript" src="js/pumprequest.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/pages/pumps.js"></script>
+        <script type="text/javascript" src="js/pages/pumpdetails.js"></script>
+        <script type="text/javascript" src="js/pages/setup.js"></script>
+        <script type="text/javascript" src="js/pages/me.js"></script>
+        <script type="text/javascript" src="js/pages/messages.js"></script>
+        <script type="text/javascript" src="js/pages/landing.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
+    </body>
+</html>

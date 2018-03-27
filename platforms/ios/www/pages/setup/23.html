@@ -1,0 +1,49 @@
+<div class="setup-app">
+	<h1>Set up your pump's Wifi!</h1>
+	<p class="cellmiddle" style="width:100%; padding-top:2%; padding-bottom:2%;">My pump information: </p>
+	<div style="margin-top:5px;">
+		<b>MAC Address:</b> <p style="font-size:100%; margin:0;margin-left:5px; display:unset;" id="macAddress">A020A63455D5</p>
+	</div>
+	<div style="margin-top:5px;margin-bottom:5px;">
+		<b>Serial No:</b> <p style="font-size:100%; margin:0;margin-left:5px; display:unset;" id="serialNo">179D-0001009</p>
+	</div>
+	<form action="#" class="cmxform">
+			  <label for="pumpName"><b>Pump Name:</b></label>
+			  <input class="pumpInput" id="pumpName" /><br/>
+
+			  <label for="pumpDescription"><b>Description:</b></label>
+			  <input class="pumpInput" id="pumpDescription" /><br/>
+
+			  <label for="zipcode"><b>Zipcode:</b><em>*</em></label>
+			  <input class="pumpInput" id="zipcode" /><br/>
+
+			  <label for="emailAddress"><b>Email:</b><em>*</em></label>
+			  <input class="pumpInput" id="emailAddress" /><br/>
+				
+			<div class="checkboxFive"> 		
+			<input type="checkbox" value="useLocation" id="useLocation" name=""/>	  	
+			<label for="useLocation"></label>
+			Allow app to use your GPS location?<br>
+			</div>
+	</form>
+	<div style="float:left;width:100%;text-align:center;vertical-align:middle;">
+		<button id="actionButton" class="buttonlarge" ng-click="performAction(savePumpInfo)">SAVE</button>
+	</div>
+	<div>
+		<img class="progressSpinner" style="width:12%;float:right;margin-top:-13%;margin-right:3%;">
+		<i class="fa fa-check" style="width:12%;float:right;margin-top:-13%;margin-right:3%;" aria-hidden="true"></i>
+		<i class="fa fa-times" style="width:12%;float:right;margin-top:-13%;margin-right:3%;" aria-hidden="true"></i>
+	</div>
+	<div class="clearfix"></div>
+	<div id="failureText" style="margin-top:10px;">
+		<p>Failed to update pump information! Please try saving again.</p>
+	</div>
+</div>
+<div class="setup-footer">
+	<a ng-click="goToSetupPage(22)" class="backButton" style="float:left">
+		<i class="fa fa-chevron-left" aria-hidden="true"></i>
+	</a>
+	<div style="margin:0;padding:0;width:100%;text-align:right;">
+		<button id="nextButton" ng-click="goToSetupPage(24)" class="buttonsmall">NEXT</button>
+	</div>
+</div>

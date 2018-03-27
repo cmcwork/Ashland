@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>326120545493-oi0pp3bdh6o1rt3u158ci4t1cfv0e8ma.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.326120545493-oi0pp3bdh6o1rt3u158ci4t1cfv0e8ma</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBASsBhukVBUhK22XPvilGiYFG8rC2KK_c</string>
+	<key>GCM_SENDER_ID</key>
+	<string>326120545493</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.test.WAshland1</string>
+	<key>PROJECT_ID</key>
+	<string>washland-test</string>
+	<key>STORAGE_BUCKET</key>
+	<string>washland-test.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:326120545493:ios:88c7077b0ce450fb</string>
+	<key>DATABASE_URL</key>
+	<string>https://washland-test.firebaseio.com</string>
+</dict>
+</plist>

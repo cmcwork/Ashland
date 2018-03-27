@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.test.WAshland1" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <feature name="Device">
+        <param name="android-package" value="org.apache.cordova.device.Device" />
+    </feature>
+    <feature name="EmailComposer">
+        <param name="android-package" value="de.martinreinhardt.cordova.plugins.email.EmailComposer" />
+    </feature>
+    <feature name="Geolocation">
+        <param name="android-package" value="org.apache.cordova.geolocation.Geolocation" />
+    </feature>
+    <feature name="SplashScreen">
+        <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="StatusBar">
+        <param name="android-package" value="org.apache.cordova.statusbar.StatusBar" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="Whitelist">
+        <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="DeviceUtility">
+        <param name="android-package" value="deviceutility.DeviceUtility" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="Keyboard">
+        <param name="android-package" value="io.ionic.keyboard.IonicKeyboard" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="BarcodeScanner">
+        <param name="android-package" value="com.phonegap.plugins.barcodescanner.BarcodeScanner" />
+    </feature>
+    <feature name="PushNotification">
+        <param name="android-package" value="com.adobe.phonegap.push.PushPlugin" />
+    </feature>
+    <feature name="AddressImpl">
+        <param name="android-package" value="com.tv.plugin.AddressImpl" />
+    </feature>
+    <feature name="SocketsForCordova">
+        <param name="android-package" value="cz.blocshop.socketsforcordova.SocketPlugin" />
+    </feature>
+    <feature name="NativeSettings">
+        <param name="android-package" value="com.phonegap.plugins.opensettings.NativeSettings" />
+    </feature>
+    <name>Ashland</name>
+    <description>
+        Ashland pump control application.
+    </description>
+    <author email="dev@cordova.apache.org" href="http://cordova.io">
+        Apache Cordova Team
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <allow-intent href="market:*" />
+    <resource-file src="google-services.json" target="app/google-services.json" />
+    <splash density="port-hdpi" src="res/screen/android/screen-hdpi-portrait.jpg" />
+    <splash density="port-ldpi" src="res/screen/android/screen-ldpi-portrait.jpg" />
+    <splash density="port-mdpi" src="res/screen/android/screen-mdpi-portrait.jpg" />
+    <splash density="port-xhdpi" src="res/screen/android/screen-xhdpi-portrait.jpg" />
+    <icon density="ldpi" src="res/icon/android/black/ldpi.png" />
+    <icon density="mdpi" src="res/icon/android/black/mdpi.png" />
+    <icon density="hdpi" src="res/icon/android/black/hdpi.png" />
+    <icon density="xhdpi" src="res/icon/android/black/xhdpi.png" />
+    <icon density="xxhdpi" src="res/icon/android/black/xxhdpi.png" />
+    <icon density="xxxhdpi" src="res/icon/android/black/xxxhdpi.png" />
+    <preference name="loglevel" value="DEBUG" />
+    <preference name="orientation" value="portrait" />
+    <preference name="SplashScreen" value="screen" />
+    <preference name="SplashScreenDelay" value="2000" />
+    <preference name="SplashShowOnlyFirstTime" value="false" />
+</widget>

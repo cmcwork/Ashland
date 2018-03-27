@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="deviceutility" version="1.0.0" 
+	xmlns="http://apache.org/cordova/ns/plugins/1.0" 
+	xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<name>DeviceUtility</name>
+	<description>This plugin allows Phonegap applications to manage Wifi connections.</description>
+	<js-module name="DeviceUtility" src="www/DeviceUtility.js">
+		<clobbers target="window.DeviceUtility" />
+	</js-module>
+
+	<platform name="android">
+	    <config-file parent="/manifest" target="AndroidManifest.xml">
+		<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+		<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+		<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+	    </config-file>
+
+	    <config-file parent="/*" target="res/xml/config.xml">
+		<feature name="DeviceUtility">
+		    <param name="android-package" value="deviceutility.DeviceUtility" />
+		    <param name="onload" value="true" />
+		</feature>
+
+	    </config-file>
+		<source-file src="src/android/DeviceUtility.java" target-dir="src/deviceutility" />
+	</platform>
+
+	<platform name="ios">
+	    <config-file parent="/*" target="config.xml">
+		<feature name="DeviceUtility">
+		    <param name="ios-package" value="DeviceUtility" />
+	    </feature>
+	</config-file>
+	    <header-file src="src/ios/DeviceUtility.h"/>
+	    <source-file src="src/ios/DeviceUtility.m" />
+	    <framework src="SystemConfiguration.framework" />
+	</platform>
+</plugin>

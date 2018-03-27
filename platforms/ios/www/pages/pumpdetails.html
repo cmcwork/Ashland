@@ -1,0 +1,61 @@
+<div class="pumpDetailsMain">
+	<div class="pumpDetailsHeader textCenter" ng-style="{'background-color':iconFillColors[selectedPump.idAsNumber]}">
+			<div class="pumpDetailsIcon">
+				<img class="pumpsvg leafIconSvg" style="fill:white" />
+			</div>
+			<div class="pumpDetailsInfo">
+				<div class="pumpDetailsName">
+					{{selectedPump.name}}
+				</div>
+				<div class="pumpDetailsDescription">
+					{{selectedPump.description}}
+				</div>
+			</div>
+	</div>
+	<div class="pumpDetailsContent">
+		<div class="pumpDetailsItem" ng-repeat="item in pumpDetailsBasics" ng-class="{'pumpDetailsItemFirst':$index===0}">
+			<div class="pumpDetailsItemSummary" ng-init="fixItemHeight('.pumpDetailsContent', '.pumpDetailsItemSummary')" ng-click="item.collapsed = !item.collapsed">
+				<div class="pumpDetailsItemLeft">
+					<div class="pumpDetailsItemInner">
+						<div class="pumpDetailsItemTitle">
+							<div class="verticalCenter">
+								{{item.title}}
+							</div>
+						</div>
+						<div class="pumpDetailsItemValue">
+							<div class="verticalCenter">
+								{{pumpDetail[item.valueKey]}}
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="pumpDetailsItemRight textCenter">
+					<div class="pumpDetailsItemExpand" ng-class="{'rotate90':!item.collapsed}">
+						<div class="verticalCenter">
+							<i class="fas fa-chevron-right"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="pumpDetailsItemDetails" uib-collapse="item.collapsed">
+				<div>more information and graphs here...</div>
+			</div>
+		</div>
+		<div class="pumpDetailsStatus">
+			<div class="pumpStatusItem" ng-repeat="item in pumpDetail.statusList track by $index" ng-init="fixItemHeight('.pumpDetailsContent', '.pumpStatusItem')">
+				<div class="pumpStatusItemInner">
+					<div class="pumpStatusItemLeft">
+						<div class="verticalCenter">
+							Status #{{$index+1}}
+						</div>
+					</div>
+					<div class="pumpStatusItemRight textCenter">
+						<svg fill="{{item==='0'?'green':'red'}}" style="pumpStatusItemSvg" height="10" width="10">
+						  <circle cx="5" cy="10" r="5" stroke="black" stroke-width="0" />
+						</svg>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

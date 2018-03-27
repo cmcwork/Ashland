@@ -1,0 +1,134 @@
+{
+  "cordova-plugin-whitelist": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-whitelist@1"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-splashscreen": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-splashscreen@5.0.2"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-device": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-device@^2.0.1"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "deviceutility": {
+    "source": {
+      "type": "local",
+      "path": "/home/ming/Work/Ashland/node_modules/deviceutility"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-email": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-email"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-statusbar": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-statusbar@2.4.1"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "ionic-plugin-keyboard": {
+    "source": {
+      "type": "registry",
+      "id": "ionic-plugin-keyboard"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "phonegap-plugin-push": {
+    "source": {
+      "type": "registry",
+      "id": "phonegap-plugin-push@2.1.3"
+    },
+    "is_top_level": true,
+    "variables": {
+      "FCM_VERSION": "11.6.2"
+    }
+  },
+  "cordova-plugin-geolocation": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-geolocation@4.0.1"
+    },
+    "is_top_level": true,
+    "variables": {
+      "GEOLOCATION_USAGE_DESCRIPTION": "This app wants to use your location always, even if the app is running in the background."
+    }
+  },
+  "cordova-plugin-barcodescanner": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-barcodescanner"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-compat": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-compat@^1.0.0"
+    },
+    "is_top_level": false,
+    "variables": {}
+  },
+  "phonegap-plugin-barcodescanner": {
+    "source": {
+      "type": "registry",
+      "id": "phonegap-plugin-barcodescanner@7.0.2"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-ip-mac-address": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-ip-mac-address"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cz.blocshop.socketsforcordova": {
+    "source": {
+      "type": "registry",
+      "id": "cz.blocshop.socketsforcordova"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "com.phonegap.plugins.nativesettingsopener": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-nativesettings"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-opensettings": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-opensettings"
+    },
+    "is_top_level": true,
+    "variables": {}
+  }
+}

@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.test.WAshland1" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Ashland</name>
+    <description>
+        Ashland pump control application.
+    </description>
+    <author email="dev@cordova.apache.org" href="http://cordova.io">
+        Apache Cordova Team
+    </author>
+    <content src="index.html" />
+    <plugin name="cordova-plugin-whitelist" spec="1" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <platform name="android">
+        <allow-intent href="market:*" />
+        <resource-file src="google-services.json" target="app/google-services.json" />
+        <preference name="orientation" value="portrait" />
+        <preference name="SplashScreen" value="screen" />
+        <preference name="SplashScreenDelay" value="2000" />
+        <preference name="SplashShowOnlyFirstTime" value="false" />
+        <splash density="port-hdpi" src="res/screen/android/screen-hdpi-portrait.jpg" />
+        <splash density="port-ldpi" src="res/screen/android/screen-ldpi-portrait.jpg" />
+        <splash density="port-mdpi" src="res/screen/android/screen-mdpi-portrait.jpg" />
+        <splash density="port-xhdpi" src="res/screen/android/screen-xhdpi-portrait.jpg" />
+        <icon density="ldpi" src="res/icon/android/black/ldpi.png" />
+        <icon density="mdpi" src="res/icon/android/black/mdpi.png" />
+        <icon density="hdpi" src="res/icon/android/black/hdpi.png" />
+        <icon density="xhdpi" src="res/icon/android/black/xhdpi.png" />
+        <icon density="xxhdpi" src="res/icon/android/black/xxhdpi.png" />
+        <icon density="xxxhdpi" src="res/icon/android/black/xxxhdpi.png" />
+    </platform>
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+        <resource-file src="GoogleService-Info.plist" />
+        <preference name="orientation" value="portrait" />
+        <preference name="SplashScreen" value="screen" />
+        <preference name="SplashScreenDelay" value="2000" />
+        <preference name="SplashShowOnlyFirstTime" value="false" />
+        <preference name="DisallowOverscroll" value="true" />
+        <splash height="480" src="res/screen/ios/Default~iphone.png" width="320" />
+        <splash height="960" src="res/screen/ios/Default@2x~iphone.png" width="640" />
+        <splash height="1024" src="res/screen/ios/Default-Portrait~ipad.png" width="768" />
+        <splash height="2048" src="res/screen/ios/Default-Portrait@2x~ipad.png" width="1536" />
+        <splash height="1136" src="res/screen/ios/Default-568h@2x~iphone.png" width="640" />
+        <splash height="1334" src="res/screen/ios/Default-667h.png" width="750" />
+        <splash height="2208" src="res/screen/ios/Default-736h.png" width="1242" />
+        <icon height="180" src="res/icon/ios/black/icon-60@3x.png" width="180" />
+        <icon height="60" src="res/icon/ios/black/icon-60.png" width="60" />
+        <icon height="120" src="res/icon/ios/black/icon-60@2x.png" width="120" />
+        <icon height="76" src="res/icon/ios/black/icon-76.png" width="76" />
+        <icon height="152" src="res/icon/ios/black/icon-76@2x.png" width="152" />
+        <icon height="40" src="res/icon/ios/black/icon-40.png" width="40" />
+        <icon height="80" src="res/icon/ios/black/icon-40@2x.png" width="80" />
+        <icon height="57" src="res/icon/ios/black/icon.png" width="57" />
+        <icon height="114" src="res/icon/ios/black/icon@2x.png" width="114" />
+        <icon height="72" src="res/icon/ios/black/icon-72.png" width="72" />
+        <icon height="144" src="res/icon/ios/black/icon-72@2x.png" width="144" />
+        <icon height="167" src="res/icon/ios/black/icon-167.png" width="167" />
+        <icon height="29" src="res/icon/ios/black/icon-small.png" width="29" />
+        <icon height="58" src="res/icon/ios/black/icon-small@2x.png" width="58" />
+        <icon height="50" src="res/icon/ios/black/icon-50.png" width="50" />
+        <icon height="100" src="res/icon/ios/black/icon-50@2x.png" width="100" />
+        <icon height="167" src="res/icon/ios/black/icon-83.5@2x.png" width="167" />
+        <config-file mode="merge" parent="NSLocationWhenInUseUsageDescription" target="*-Info.plist">
+            <string>This app wants to use your location always, even if the app is running in the background.</string>
+        </config-file>
+        <config-file mode="merge" parent="NSLocationAlwaysUsageDescription" target="*-Info.plist">
+            <string>This app wants to use your location always, even if the app is running in the background.</string>
+        </config-file>
+        <config-file mode="merge" parent="NSLocationAlwaysAndWhenInUseUsageDescription" target="*-Info.plist">
+            <string>This app wants to use your location always, even if the app is running in the background.</string>
+        </config-file>
+        <config-file mode="merge" parent="NSLocationUsageDescription" target="*-Info.plist">
+            <string>Location is used for setting the location of the pump you are configuring.</string>
+        </config-file>
+        <config-file mode="merge" parent="NSCameraUsageDescription" target="*-Info.plist">
+            <string>To scan barcodes to pump setup and configuration.</string>
+        </config-file>
+    </platform>
+    <plugin name="cordova-plugin-splashscreen" spec="^5.0.2" />
+    <plugin name="deviceutility" spec="/home/ming/Misc/cordova/plugins/DeviceUtility" />
+    <plugin name="cordova-plugin-email" spec="^1.2.6" />
+    <plugin name="cordova-plugin-statusbar" spec="^2.4.1" />
+    <plugin name="ionic-plugin-keyboard" spec="^2.2.1" />
+    <plugin name="phonegap-plugin-push" spec="^2.1.3">
+        <variable name="FCM_VERSION" value="11.6.2" />
+    </plugin>
+    <plugin name="cordova-plugin-geolocation" spec="^4.0.1">
+        <variable name="GEOLOCATION_USAGE_DESCRIPTION" value="This app wants to use your location always, even if the app is running in the background." />
+    </plugin>
+    <plugin name="cordova-plugin-device" spec="^2.0.1" />
+    <plugin name="phonegap-plugin-barcodescanner" spec="^7.0.2" />
+    <plugin name="cordova-plugin-ip-mac-address" spec="^1.0.1" />
+    <plugin name="cz.blocshop.socketsforcordova" spec="^1.1.0" />
+    <plugin name="cordova-plugin-opensettings" spec="^1.3.0" />
+    <engine name="android" spec="^7.0.0" />
+    <engine name="ios" spec="^4.5.4" />
+</widget>

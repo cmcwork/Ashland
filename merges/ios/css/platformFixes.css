@@ -1,0 +1,23 @@
+.setup-app .text-line {
+	margin-left: 0;
+    padding-left:0;
+}
+
+.setup-app .text-line2 {
+	width: 50%;
+	margin-left: -3%;
+	margin-top: -1%;
+	font-weight: 300;
+}
+
+.setup-app form.cmxform input {
+  width: 58%;
+}
+
+.setup-app form.cmxform .pumpInput {
+    width:53%;
+}
+
+.setup-app .savePumpInfoDiv {
+    margin-top:8%;
+}

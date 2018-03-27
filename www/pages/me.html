@@ -1,0 +1,46 @@
+<div class="meMain" ng-show="editingItem===null&&!showScanning">
+	<div class="meMainTop textCenter">
+		<div class="verticalCenter meMainTopInner">
+			<div class="meMainTopIcon">
+				<i class="fas fa-user-circle"></i>
+			</div>
+			<div class="meMainTopText">
+				Please fill the following information:
+			</div>
+		</div>
+	</div>
+	<div class="meMainBottom">
+		<div class="meMainInner">
+			<div class="meMainBox" ng-repeat="item in editOptions" ng-click="editMe(item)">
+				<div class="meMainBoxLeft">
+					<div class="verticalCenter meMainBoxInner">
+						{{item.title}}
+					</div>
+				</div>
+				<div class="meMainBoxRight">
+					<div class="verticalCenter meMainBoxInner">
+						{{item.name==='wifipass'?(me.wifipass===''?(me.wifipassexists===null||!me.wifipassexists?'':'None'):'******'):me[item.name]}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="meEdit" ng-show="editingItem!==null&&!showScanning">
+	<div class="meEditInner">
+		<div class="meEditTitle">
+			{{editingItem.title}}
+		</div>
+		<div class="meEditInputs">
+			<input id="meEditInputTextbox" maxlength="{{editingItem.maxlength}}" ng-keyup="typeEdit()" ng-show="editingItem.name!=='allowlocation'" ng-model="editingTextInput" ng-change="editingCheckboxInput=false" placeholder="Enter your {{editingItem.title}}" type="{{editingItem.name==='wifipass'?'password':(editingItem.name==='zipcode'?'number':(editingItem.name==='email'?'email':'text'))}}" />
+			<div ng-show="editingItem.showCheckbox" class="checkboxFive"> 		
+				<input type="checkbox" ng-model="editingCheckboxInput" id="meCheckbox" name="meCheckbox" ng-click="editingTextInput=''" />	  	
+				<label for="meCheckbox"></label>
+				{{editingItem.checkboxText}}<br>
+			</div>
+		</div>
+		<div class="meEditSave">
+			<button class="popupButtonConfirm" ng-class="{'popupButtonConfirmWifiNo':!allowSave}" ng-click="saveEdit()">Save</button>
+		</div>
+	</div>
+</div>

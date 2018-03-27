@@ -1,0 +1,63 @@
+{
+  "_from": "cordova-plugin-nativesettings",
+  "_id": "cordova-plugin-nativesettings@1.1.0",
+  "_inBundle": false,
+  "_integrity": "sha1-biqzpp8t7JaomirrSqKvjTfZ+yA=",
+  "_location": "/cordova-plugin-nativesettings",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "cordova-plugin-nativesettings",
+    "name": "cordova-plugin-nativesettings",
+    "escapedName": "cordova-plugin-nativesettings",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-nativesettings/-/cordova-plugin-nativesettings-1.1.0.tgz",
+  "_shasum": "6e2ab3a69f2dec96a89a2aeb4aa2af8d37d9fb20",
+  "_spec": "cordova-plugin-nativesettings",
+  "_where": "/home/ming/Work/Ashland",
+  "bugs": {
+    "url": "https://github.com/michael79/cordova-plugin-nativesettings/issues"
+  },
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "com.phonegap.plugins.nativesettingsopener",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "deprecated": false,
+  "description": "Native settings",
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "homepage": "https://github.com/michael79/cordova-plugin-nativesettings#readme",
+  "keywords": [
+    "cordova",
+    "settings",
+    "native",
+    "android",
+    "ios",
+    "install",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "name": "cordova-plugin-nativesettings",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michael79/cordova-plugin-nativesettings.git"
+  },
+  "version": "1.1.0"
+}
